@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EriCas • Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">EriCas</div>
+    <div class="tagline">Create your secure account</div>
+  </header>
+
+  <main class="container" style="max-width:400px;">
+    <section class="account-card">
+      <h2>Create Account</h2>
+
+      <form id="signupForm">
+        <label>Full Name</label>
+        <input type="text" id="signupName" required placeholder="John Doe">
+
+        <label>Email</label>
+        <input type="email" id="signupEmail" required placeholder="you@example.com">
+
+        <label>Password</label>
+        <div style="position:relative;">
+          <input type="password" id="signupPassword" required placeholder="Choose password" style="width:100%;">
+          <button type="button" id="toggleSignupPwd" style="position:absolute; right:10px; top:8px; background:none; border:none; cursor:pointer;">👁️</button>
+        </div>
+
+        <button class="btn-primary" type="submit">Create Account</button>
+
+        <p style="margin-top:12px; font-size:14px;">
+          Already have an account?
+          <a href="index.html">Log In</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
