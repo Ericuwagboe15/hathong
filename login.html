@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EriCas • Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">EriCas</div>
+    <div class="tagline">Welcome back — secure login</div>
+  </header>
+
+  <main class="container" style="max-width:400px;">
+    <section class="account-card">
+      <h2>Login</h2>
+
+      <form id="loginForm">
+        <label>Email</label>
+        <input type="email" id="loginEmail" required placeholder="you@example.com">
+
+        <label>Password</label>
+        <div style="position:relative;">
+          <input type="password" id="loginPassword" required placeholder="Enter password" style="width:100%;">
+          <button type="button" id="toggleLoginPwd" style="position:absolute; right:10px; top:8px; background:none; border:none; cursor:pointer;">👁️</button>
+        </div>
+
+        <button class="btn-primary" type="submit">Log In</button>
+
+        <p style="margin-top:12px; font-size:14px;">
+          Don't have an account?
+          <a href="signup.html">Sign Up</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
