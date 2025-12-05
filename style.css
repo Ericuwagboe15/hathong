@@ -168,3 +168,158 @@ input {
   margin-top: 30px;
   color: var(--muted);
 }
+
+/* ============================================
+   RESPONSIVE MEDIA QUERIES — ERICAS BANK
+   ============================================ */
+
+/* ----------- Large Desktop (1400px+) ----------- */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1300px;
+    gap: 30px;
+  }
+
+  .account-card h2 {
+    font-size: 32px;
+  }
+
+  #currentBalance {
+    font-size: 40px;
+  }
+
+  .tx-table th, .tx-table td {
+    padding: 16px;
+  }
+}
+
+
+/* ----------- Standard Desktop (1024px - 1399px) ----------- */
+@media (min-width: 1024px) and (max-width: 1399px) {
+
+  .container {
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+  }
+
+  .send-card,
+  .account-card,
+  .transactions-card {
+    padding: 22px;
+  }
+}
+
+
+/* ----------- Tablet Landscape / Small Desktop (900px - 1023px) ----------- */
+@media (min-width: 900px) and (max-width: 1023px) {
+  
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .send-card {
+    order: 2;
+  }
+
+  .transactions-card {
+    order: 3;
+  }
+
+  .account-card {
+    order: 1;
+  }
+}
+
+
+/* ----------- Tablet Portrait (600px - 899px) ----------- */
+@media (min-width: 600px) and (max-width: 899px) {
+
+  .container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .header .logo {
+    font-size: 28px;
+  }
+
+  #currentBalance {
+    font-size: 30px;
+  }
+
+  .tx-table th, .tx-table td {
+    padding: 10px;
+  }
+}
+
+
+/* ----------- Mobile (599px and below) ----------- */
+@media (max-width: 599px) {
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .header {
+    padding: 18px;
+  }
+
+  .header .logo {
+    font-size: 26px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .account-card,
+  .send-card,
+  .transactions-card {
+    padding: 16px;
+  }
+
+  #currentBalance {
+    font-size: 28px;
+  }
+
+  .tx-table th, .tx-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .tx-header h2 {
+    font-size: 18px;
+  }
+
+  select {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+
+/* ----------- Extra Small Phones (350px and below) ----------- */
+@media (max-width: 350px) {
+
+  .header .logo {
+    font-size: 22px;
+  }
+
+  .container {
+    padding: 8px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
