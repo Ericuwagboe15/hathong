@@ -1,0 +1,170 @@
+:root {
+  --blue: #0a3d62;
+  --light-blue: #3c6382;
+  --green: #0a8754;
+  --danger: #c0392b;
+  --bg: #f4f7fb;
+  --card: #fff;
+  --muted: #7f8c8d;
+  --radius: 14px;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: #222;
+}
+
+.header {
+  padding: 20px;
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.tagline {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 350px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.account-card,
+.send-card,
+.transactions-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.account-card h2 {
+  margin: 0;
+}
+
+.account-number {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.balance-box {
+  margin-top: 15px;
+}
+
+.balance-box p {
+  margin: 0;
+  color: var(--muted);
+}
+
+#currentBalance {
+  font-size: 32px;
+  margin: 6px 0;
+}
+
+.small-text {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.btn-primary {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: var(--blue);
+  color: white;
+  font-weight: bold;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--light-blue);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.tx-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.tx-table th, .tx-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.tx-amount {
+  font-weight: bold;
+}
+
+.tx-amount.negative {
+  color: var(--danger);
+}
+
+.tx-amount.positive {
+  color: var(--green);
+}
+
+.status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-align: center;
+  display: inline-block;
+}
+
+.status.pending {
+  background: #f9e79f;
+  color: #7d6608;
+}
+
+.status.completed {
+  background: #d5f5e3;
+  color: #145a32;
+}
+/* For login/signup forms */
+.container form {
+  max-width: 100%;
+  margin: auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  color: var(--muted);
+}
