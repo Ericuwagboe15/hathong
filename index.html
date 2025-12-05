@@ -1,14 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EriCas Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to My Page</h1>
-    </div>
-    
+  <header class="header">
+    <div class="logo">EriCas</div>
+    <div class="tagline">Smart • Fast • Secure Banking</div>
+  </header>
+
+  <main class="container">
+
+    <!-- ACCOUNT CARD -->
+    <section class="account-card">
+      <h2>Welcome, <span id="userName">User</span></h2>
+      <p class="account-number">Account • 2207*****6</p>
+
+      <div class="balance-box">
+        <p>Current Balance</p>
+        <h1 id="currentBalance">$1,000.00</h1>
+
+        <p class="small-text">Available Balance</p>
+        <h3 id="availableBalance">$1,000.00</h3>
+
+        <button id="toggleBalance" class="btn-primary" style="margin-top:10px; font-size:14px;">Hide Balance</button>
+      </div>
+    </section>
+
+    <!-- SEND MONEY -->
+    <section class="send-card">
+      <h2>Send Money</h2>
+
+      <form id="sendForm">
+        <label>Recipient</label>
+        <input type="text" id="recipient" required placeholder="Enter name or account">
+
+        <label>Amount ($)</label>
+        <input type="number" id="amount" required step="0.01" min="0.01" placeholder="50.00">
+
+        <label>Note (optional)</label>
+        <input type="text" id="note" placeholder="Payment note">
+
+        <button type="submit" class="btn-primary">Send</button>
+      </form>
+    </section>
+
+    <!-- TRANSACTIONS -->
+    <section class="transactions-card">
+      <div class="tx-header">
+        <h2>Transaction History</h2>
+        <select id="filterRange">
+          <option value="30">Last 30 Days</option>
+          <option value="60">Last 60 Days</option>
+          <option value="all">All</option>
+        </select>
+      </div>
+
+      <table class="tx-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="txBody"></tbody>
+      </table>
+    </section>
+        <button id="logoutBtn" class="btn-primary" style="margin-top:10px; font-size:14px;">Logout</button>
+  </main>
+
+  <footer class="footer">
+    © 2025 EriCas Digital Bank — Demo Only
+  </footer>
+
+  <script src="auth.js"></script>
+  <script src="user.js"></script>
 </body>
 </html>
